@@ -1,0 +1,90 @@
+$font-size-small: 16px;
+$font-size-medium: 20px;
+$font-size-large: 35px;
+$font-size-photo: 10px;
+$font-size-small-pc: 24px;
+$font-size-medium-pc: 28px;
+$font-size-large-pc: 43px;
+$font-size-photo-pc: 15px;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+//Estilos para mobile 
+.container{
+    .container__card{
+        .container__card--text{
+            padding: 10px;
+            h1{font-size: $font-size-large;}
+            h3{font-size: $font-size-medium;}
+            p{font-size: $font-size-small;}
+        }
+        .container__card--img{
+            padding: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            img{
+                max-width: 150px;
+                max-height: 208px;
+                padding-right: calc(30px + 10%);
+                padding-left: 0px;
+                position: relative;
+                display: inline-block;
+               }
+               #photo_2, #photo_4, #photo_6 {
+                margin-top: 40px;
+                
+              }
+              .caption-1, .caption-2, .caption-3, .caption-4, .caption-5, .caption-6 {
+                top: -30px;
+                right: 30px;
+                transform-origin: top right;
+                transform: rotate(90deg);
+                white-space: nowrap;
+                position: relative;
+                font-size: $font-size-photo;
+              }
+}}
+    .container__footer{
+        padding: 10px;
+        font-size: $font-size-small;
+        color: gray ;
+    }
+
+}
+
+// Media query para escritorios
+@media (min-width: 768px) {
+    .container {
+      .container__card {
+        .container__card--text {
+            padding: 10px;
+            h1{font-size: $font-size-large-pc;}
+            h3{font-size: $font-size-medium-pc;}
+            p{font-size: $font-size-small-pc;}
+        }
+  
+        .container__card--img {
+          img {
+            max-width: 360px;
+            max-height: 448px; 
+            padding-right: calc(80px + 10%);
+          }
+          #photo_2, #photo_5 {
+            margin-top: 80px;
+            
+          }
+          .caption-1, .caption-2, .caption-3, .caption-4, .caption-5, .caption-6 {
+            top: -17px;
+            right: 95px;
+            font-size: $font-size-photo-pc;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "sass": "^1.63.6"
+  },
+  "scripts": {
+    "compile:scss": "node-sass \"styles.scss\" -o \"dist/css\"",
+    "build:scss": "node-sass --watch styles.scss -o dist/css"
+  }
+}
